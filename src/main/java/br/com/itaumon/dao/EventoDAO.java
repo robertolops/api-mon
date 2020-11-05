@@ -15,7 +15,7 @@ public interface EventoDAO extends CrudRepository <Evento, Integer>{
 
 	
 	
-	@Query(value="SELECT count(id) as total FROM itaumon.tb_evento where"
+	@Query(value="SELECT count(id) as total FROM tb_evento where"
 			+ " data >= :inicio and data<= :fim AND alarme_id = :num", nativeQuery = true)
 		long getByTotal(@Param("inicio") Date inicio, @Param("fim") Date fim, @Param("num") int num);
 			
